@@ -18,30 +18,42 @@ const MessageInput: React.FC<MessageInputProps> = ({ onSendMessage, isLoading })
   };
 
   return (
-    <div className="p-4 md:p-6 bg-white border-t-2 border-[#d4af37]/20 shadow-[0_-4px_20px_-5px_rgba(0,0,0,0.05)]">
-      <form onSubmit={handleSubmit} className="flex space-x-3 max-w-5xl mx-auto">
-        <input
-          type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          placeholder="Ask Lord Krishna for guidance..."
-          disabled={isLoading}
-          className="flex-1 bg-[#fdfaf1] border-2 border-[#d4af37]/30 rounded-xl px-6 py-4 text-[#1a0f00] text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-[#8b4513] focus:border-transparent disabled:opacity-50 transition-all font-lora placeholder-[#8b4513]/40"
-        />
-        <button
-          type="submit"
-          disabled={!input.trim() || isLoading}
-          className="bg-[#3d1f06] text-[#d4af37] px-6 py-4 rounded-xl hover:bg-[#2a1504] transition-all disabled:opacity-50 flex items-center justify-center shadow-lg border-b-4 border-[#1a0f00] min-w-fit"
-        >
-          <span className="font-cinzel font-bold tracking-widest text-xs md:text-sm whitespace-nowrap">Ask Krishna</span>
-          <svg className="w-5 h-5 ml-2 transform rotate-90 hidden sm:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-          </svg>
-        </button>
-      </form>
-      <p className="text-[11px] text-center mt-3 text-[#5c2e0c] font-lora italic font-medium opacity-80">
-        "I am the sapidity in water, O son of Kunti; I am the light in the moon and the sun..."
-      </p>
+    <div className="bg-[#120521] border-t border-[#D4AF37]/20 pb-safe">
+      <div className="max-w-4xl mx-auto px-6 py-5 md:py-8">
+        <form onSubmit={handleSubmit} className="flex space-x-4 items-center">
+          <div className="flex-1 relative group">
+            <div className="absolute inset-0 bg-gradient-to-r from-[#D4AF37]/5 to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-700 pointer-events-none rounded-2xl"></div>
+            <input
+              type="text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              placeholder="What seeks your soul?..."
+              disabled={isLoading}
+              className="w-full bg-[#1D0A33] border border-[#D4AF37]/20 rounded-2xl px-6 py-4 text-[#F8F5F2] text-sm md:text-base font-bold focus:outline-none focus:ring-1 focus:ring-[#D4AF37]/40 focus:border-[#D4AF37]/40 disabled:opacity-50 transition-all duration-300 font-lora placeholder-[#A8A29E]/30 shadow-inner"
+            />
+          </div>
+          
+          <button
+            type="submit"
+            disabled={!input.trim() || isLoading}
+            className="group relative bg-[#2D124D] text-[#D4AF37] p-4 md:px-8 md:py-4 rounded-2xl border border-[#D4AF37]/30 hover:border-[#D4AF37] hover:bg-[#3B185F] active:scale-95 transition-all duration-300 disabled:opacity-20 flex items-center justify-center shadow-[0_4px_20px_rgba(0,0,0,0.5)] overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-[#D4AF37]/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+            <span className="relative font-cinzel font-bold tracking-[0.2em] text-xs md:text-sm uppercase whitespace-nowrap">Ask Krishna</span>
+            <svg className="relative w-4 h-4 ml-3 hidden md:block transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </button>
+        </form>
+        
+        <div className="flex items-center justify-center mt-5 space-x-3">
+          <div className="h-[1px] w-8 bg-gradient-to-r from-transparent to-[#D4AF37]/20"></div>
+          <p className="text-[10px] md:text-xs text-center text-[#A8A29E]/50 font-jakarta font-medium italic tracking-[0.15em] uppercase">
+            Ethereal wisdom for the modern seeker
+          </p>
+          <div className="h-[1px] w-8 bg-gradient-to-l from-transparent to-[#D4AF37]/20"></div>
+        </div>
+      </div>
     </div>
   );
 };

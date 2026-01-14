@@ -19,10 +19,11 @@ export const SUGGESTED_QUESTIONS = [
 ];
 
 export const COLORS = {
-  saffron: '#f4a460',
-  deepOrange: '#ff8c00',
-  gold: '#b8860b', // Darker goldenrod for better visibility
-  parchment: '#fdfaf1', // Lighter ivory for better card contrast
-  textPrimary: '#1a0f00', // Deep espresso brown
-  textSecondary: '#4a3728', // Muted cocoa brown
+  background: '#120521',
+  surface: '#1D0A33',
+  accent: '#D4AF37', 
+  accentLight: '#F3E5AB',
+  textPrimary: '#F8F5F2',
+  textSecondary: '#A8A29E',
+  border: 'rgba(212, 175, 55, 0.15)'
 };

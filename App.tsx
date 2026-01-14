@@ -5,7 +5,6 @@ import MessageList from './components/MessageList';
 import MessageInput from './components/MessageInput';
 import { Message, Role } from './types';
 import { startGitaChat } from './services/geminiService';
-import { SUGGESTED_QUESTIONS } from './constants';
 import { Chat } from '@google/genai';
 
 const App: React.FC = () => {
@@ -70,39 +69,30 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col h-screen max-h-screen bg-[#fdfaf1] text-[#1a0f00]">
+    <div className="flex flex-col h-screen max-h-screen bg-[#120521] text-[#F8F5F2] selection:bg-[#D4AF37]/20">
+      {/* Background radial glows */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
+        <div className="absolute top-[-15%] left-[-15%] w-[60%] h-[60%] bg-[#4C1D95]/10 blur-[140px] rounded-full"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-[#D4AF37]/5 blur-[120px] rounded-full"></div>
+        <div className="absolute top-[30%] left-[20%] w-[30%] h-[30%] bg-[#7E22CE]/5 blur-[100px] rounded-full"></div>
+      </div>
+
       <Header />
       
-      <main className="flex-1 flex flex-col overflow-hidden relative">
-        <MessageList messages={messages} isTyping={isTyping} />
-        
-        {messages.length === 0 && (
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none px-4">
-            <div className="max-w-3xl w-full flex flex-col items-center space-y-8 animate-in fade-in zoom-in-95 duration-700">
-              <div className="text-center space-y-2 mb-4">
-                <h2 className="font-cinzel text-xl md:text-2xl font-bold text-[#8b4513] tracking-widest">Seek Thy Path</h2>
-                <div className="h-0.5 w-12 bg-[#d4af37] mx-auto"></div>
-              </div>
-              <div className="flex flex-wrap justify-center gap-3">
-                {SUGGESTED_QUESTIONS.map((q, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => handleSendMessage(q)}
-                    className="pointer-events-auto bg-white hover:bg-[#3d1f06] hover:text-[#d4af37] border-2 border-[#d4af37]/40 px-5 py-3 rounded-xl text-xs md:text-sm font-lora font-medium transition-all shadow-md hover:shadow-xl hover:-translate-y-1 active:translate-y-0 text-[#3d1f06] max-w-xs text-center"
-                  >
-                    {q}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
+      <main className="relative flex-1 flex flex-col overflow-hidden z-10">
+        <MessageList 
+          messages={messages} 
+          isTyping={isTyping} 
+          onSelectSuggestion={handleSendMessage}
+        />
       </main>
 
-      <MessageInput 
-        onSendMessage={handleSendMessage} 
-        isLoading={isTyping} 
-      />
+      <div className="relative z-10">
+        <MessageInput 
+          onSendMessage={handleSendMessage} 
+          isLoading={isTyping} 
+        />
+      </div>
     </div>
   );
 };
