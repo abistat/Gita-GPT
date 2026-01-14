@@ -37,20 +37,8 @@ const MessageList: React.FC<MessageListProps> = ({ messages, isTyping }) => {
 
   return (
     <div ref={scrollRef} className="flex-1 overflow-y-auto p-4 md:p-8 space-y-8 bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')]">
-      {messages.length === 0 && (
-        <div className="flex flex-col items-center justify-center h-full text-center space-y-6 px-4">
-          <div className="w-28 h-28 bg-[#d4af37]/10 rounded-full flex items-center justify-center border-2 border-[#d4af37]/30 shadow-lg">
-            <svg className="w-14 h-14 text-[#8b4513]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.232.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-            </svg>
-          </div>
-          <h2 className="font-cinzel text-2xl font-bold text-[#5c2e0c] tracking-wide">Enter the Sacred Dialogue</h2>
-          <p className="font-lora max-w-md text-lg italic text-[#4a3728] leading-relaxed">
-            "Abandon all varieties of dharma and just surrender unto Me. I shall deliver you from all sinful reactions. Do not fear."
-          </p>
-        </div>
-      )}
-
+      {/* Empty state is now handled solely by suggestion chips in App.tsx for a cleaner look */}
+      
       {messages.map((msg) => (
         <div 
           key={msg.id} 

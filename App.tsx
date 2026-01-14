@@ -77,17 +77,23 @@ const App: React.FC = () => {
         <MessageList messages={messages} isTyping={isTyping} />
         
         {messages.length === 0 && (
-          <div className="absolute bottom-28 left-0 right-0 px-4 pointer-events-none">
-            <div className="max-w-3xl mx-auto flex flex-wrap justify-center gap-3">
-              {SUGGESTED_QUESTIONS.map((q, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => handleSendMessage(q)}
-                  className="pointer-events-auto bg-white hover:bg-[#8b4513] hover:text-[#d4af37] border-2 border-[#d4af37]/40 px-5 py-2.5 rounded-full text-sm font-lora font-medium transition-all shadow-md hover:shadow-xl hover:-translate-y-1 active:translate-y-0 text-[#3d1f06]"
-                >
-                  {q}
-                </button>
-              ))}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none px-4">
+            <div className="max-w-3xl w-full flex flex-col items-center space-y-8 animate-in fade-in zoom-in-95 duration-700">
+              <div className="text-center space-y-2 mb-4">
+                <h2 className="font-cinzel text-xl md:text-2xl font-bold text-[#8b4513] tracking-widest">Seek Thy Path</h2>
+                <div className="h-0.5 w-12 bg-[#d4af37] mx-auto"></div>
+              </div>
+              <div className="flex flex-wrap justify-center gap-3">
+                {SUGGESTED_QUESTIONS.map((q, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => handleSendMessage(q)}
+                    className="pointer-events-auto bg-white hover:bg-[#3d1f06] hover:text-[#d4af37] border-2 border-[#d4af37]/40 px-5 py-3 rounded-xl text-xs md:text-sm font-lora font-medium transition-all shadow-md hover:shadow-xl hover:-translate-y-1 active:translate-y-0 text-[#3d1f06] max-w-xs text-center"
+                  >
+                    {q}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         )}

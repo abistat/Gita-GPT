@@ -31,10 +31,10 @@ const MessageInput: React.FC<MessageInputProps> = ({ onSendMessage, isLoading })
         <button
           type="submit"
           disabled={!input.trim() || isLoading}
-          className="bg-[#3d1f06] text-[#d4af37] px-6 py-4 rounded-xl hover:bg-[#2a1504] transition-all disabled:opacity-50 flex items-center justify-center shadow-lg border-b-4 border-[#1a0f00]"
+          className="bg-[#3d1f06] text-[#d4af37] px-6 py-4 rounded-xl hover:bg-[#2a1504] transition-all disabled:opacity-50 flex items-center justify-center shadow-lg border-b-4 border-[#1a0f00] min-w-fit"
         >
-          <span className="hidden md:inline font-cinzel font-bold mr-2 tracking-widest">Invoke</span>
-          <svg className="w-5 h-5 transform rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <span className="font-cinzel font-bold tracking-widest text-xs md:text-sm whitespace-nowrap">Ask Krishna</span>
+          <svg className="w-5 h-5 ml-2 transform rotate-90 hidden sm:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
           </svg>
         </button>
