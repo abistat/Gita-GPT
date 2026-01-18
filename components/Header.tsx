@@ -8,7 +8,7 @@ const Header: React.FC = () => {
         <div className="flex items-center space-x-4">
           <div className="relative group">
             <div className="absolute inset-0 bg-[#D4AF37]/20 blur-md rounded-full group-hover:bg-[#D4AF37]/30 transition-all duration-500"></div>
-            <div className="relative w-10 h-10 md:w-12 md:h-12 bg-[#120521] rounded-full flex items-center justify-center border border-[#D4AF37]/30 shadow-lg">
+            <div className="relative w-10 h-10 md:w-12 md:h-12 bg-[#1A120B] rounded-full flex items-center justify-center border border-[#D4AF37]/30 shadow-lg">
               <svg viewBox="0 0 24 24" className="w-6 h-6 md:w-7 md:h-7 text-[#D4AF37] fill-current animate-pulse">
                 <path d="M12,2L4.5,20.29L5.21,21L12,18L18.79,21L19.5,20.29L12,2Z" />
               </svg>
@@ -19,14 +19,14 @@ const Header: React.FC = () => {
               Learn <span className="text-[#D4AF37]">Gita</span>
             </h1>
             <p className="text-[10px] font-jakarta font-medium uppercase tracking-[0.3em] text-[#D4AF37]/50 mt-1">
-              Divine Consciousness
+              Divine Presence
             </p>
           </div>
         </div>
         
         <div className="hidden sm:flex items-center space-x-4">
           <div className="flex items-center bg-[#D4AF37]/5 px-3 py-1.5 rounded-full border border-[#D4AF37]/20 shadow-inner">
-            <div className="w-1.5 h-1.5 bg-[#4ADE80] rounded-full animate-pulse mr-2 shadow-[0_0_8px_#4ADE80]"></div>
+            <div className="w-1.5 h-1.5 bg-[#D97706] rounded-full animate-pulse mr-2 shadow-[0_0_8px_#D97706]"></div>
             <span className="text-[10px] font-bold text-[#D4AF37] uppercase tracking-widest">Enlightened State</span>
           </div>
         </div>

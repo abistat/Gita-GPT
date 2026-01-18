@@ -69,12 +69,12 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col h-screen max-h-screen bg-[#120521] text-[#F8F5F2] selection:bg-[#D4AF37]/20">
+    <div className="flex flex-col h-screen max-h-screen bg-[#1A120B] text-[#F8F5F2] selection:bg-[#D4AF37]/20">
       {/* Background radial glows */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-        <div className="absolute top-[-15%] left-[-15%] w-[60%] h-[60%] bg-[#4C1D95]/10 blur-[140px] rounded-full"></div>
+        <div className="absolute top-[-15%] left-[-15%] w-[60%] h-[60%] bg-[#5C4033]/10 blur-[140px] rounded-full"></div>
         <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-[#D4AF37]/5 blur-[120px] rounded-full"></div>
-        <div className="absolute top-[30%] left-[20%] w-[30%] h-[30%] bg-[#7E22CE]/5 blur-[100px] rounded-full"></div>
+        <div className="absolute top-[30%] left-[20%] w-[35%] h-[35%] bg-[#451A03]/10 blur-[100px] rounded-full"></div>
       </div>
 
       <Header />

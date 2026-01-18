@@ -38,14 +38,14 @@ const MessageList: React.FC<MessageListProps> = ({ messages, isTyping, onSelectS
   };
 
   return (
-    <div ref={scrollRef} className="flex-1 overflow-y-auto bg-[#120521] scroll-smooth px-4">
+    <div ref={scrollRef} className="flex-1 overflow-y-auto bg-[#1A120B] scroll-smooth px-4">
       <div className="max-w-4xl mx-auto py-8 md:py-12 space-y-8 min-h-full flex flex-col">
         {messages.length === 0 ? (
           <div className="flex-1 flex flex-col items-center justify-center space-y-12 animate-in fade-in duration-1000">
             <div className="text-center space-y-6 max-w-lg">
               <div className="relative inline-block animate-float">
                  <div className="absolute inset-0 bg-[#D4AF37]/10 blur-2xl rounded-full scale-150"></div>
-                 <div className="w-16 h-16 md:w-24 md:h-24 bg-[#1D0A33] rounded-full flex items-center justify-center border border-[#D4AF37]/30 shadow-[0_0_30px_rgba(212,175,55,0.15)]">
+                 <div className="w-16 h-16 md:w-24 md:h-24 bg-[#271E14] rounded-full flex items-center justify-center border border-[#D4AF37]/30 shadow-[0_0_30px_rgba(212,175,55,0.15)]">
                     <span className="text-3xl md:text-5xl text-[#D4AF37] font-cinzel">ॐ</span>
                  </div>
               </div>
@@ -63,7 +63,7 @@ const MessageList: React.FC<MessageListProps> = ({ messages, isTyping, onSelectS
                 <button
                   key={idx}
                   onClick={() => onSelectSuggestion?.(q)}
-                  className="group bg-[#1D0A33] hover:bg-[#2D124D] text-[#F8F5F2]/80 border border-[#D4AF37]/10 hover:border-[#D4AF37]/40 p-5 rounded-2xl text-sm md:text-base font-lora font-bold transition-all duration-300 shadow-lg text-left relative overflow-hidden"
+                  className="group bg-[#271E14] hover:bg-[#32281D] text-[#F8F5F2]/80 border border-[#D4AF37]/10 hover:border-[#D4AF37]/40 p-5 rounded-2xl text-sm md:text-base font-lora font-bold transition-all duration-300 shadow-lg text-left relative overflow-hidden"
                 >
                   <div className="absolute top-0 left-0 w-[2px] h-full bg-[#D4AF37] scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top"></div>
                   <span className="text-[#D4AF37] opacity-30 group-hover:opacity-100 mr-3 font-cinzel text-xl transition-opacity">ॐ</span>
@@ -81,15 +81,15 @@ const MessageList: React.FC<MessageListProps> = ({ messages, isTyping, onSelectS
               <div 
                 className={`max-w-[90%] md:max-w-[80%] relative group ${
                   msg.role === Role.USER 
-                    ? 'bg-[#3B185F] text-[#F8F5F2] rounded-3xl rounded-tr-none shadow-[0_8px_32px_rgba(0,0,0,0.3)]' 
-                    : 'bg-[#1D0A33] text-[#F8F5F2] border border-[#D4AF37]/20 rounded-3xl rounded-tl-none shadow-[0_8px_32px_rgba(0,0,0,0.4)]'
+                    ? 'bg-[#3C2A21] text-[#F8F5F2] rounded-3xl rounded-tr-none shadow-[0_8px_32px_rgba(0,0,0,0.3)]' 
+                    : 'bg-[#271E14] text-[#F8F5F2] border border-[#D4AF37]/20 rounded-3xl rounded-tl-none shadow-[0_8px_32px_rgba(0,0,0,0.4)]'
                 } p-5 md:p-7 transition-all duration-300`}
               >
                 <div className={`flex items-center justify-between mb-4 border-b border-[#D4AF37]/10 pb-2`}>
                   <div className="flex items-center space-x-2">
                     <div className={`w-2 h-2 rounded-full ${msg.role === Role.USER ? 'bg-[#A8A29E]' : 'bg-[#D4AF37] shadow-[0_0_8px_rgba(212,175,55,0.5)]'}`}></div>
                     <span className={`text-[10px] font-bold uppercase tracking-[0.3em] ${msg.role === Role.USER ? 'text-[#A8A29E]' : 'text-[#D4AF37]'}`}>
-                      {msg.role === Role.USER ? 'Seeker' : 'Krishna AI'}
+                      {msg.role === Role.USER ? 'Seeker' : 'Krishna'}
                     </span>
                   </div>
                   {msg.role === Role.KRISHNA && (
@@ -117,7 +117,7 @@ const MessageList: React.FC<MessageListProps> = ({ messages, isTyping, onSelectS
 
         {isTyping && (
           <div className="flex justify-start">
-            <div className="bg-[#1D0A33] border border-[#D4AF37]/10 rounded-2xl rounded-tl-none px-6 py-4 shadow-xl flex space-x-3 items-center">
+            <div className="bg-[#271E14] border border-[#D4AF37]/10 rounded-2xl rounded-tl-none px-6 py-4 shadow-xl flex space-x-3 items-center">
               <span className="text-[10px] font-bold text-[#D4AF37]/60 uppercase tracking-widest">Divine Reflection</span>
               <div className="flex space-x-1.5">
                 <div className="w-1.5 h-1.5 bg-[#D4AF37]/40 rounded-full animate-bounce"></div>

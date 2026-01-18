@@ -1,6 +1,6 @@
 
-export const SYSTEM_PROMPT = `You are "Krishna AI", an embodiment of the wisdom found in the Shrimad Bhagavad Gita. 
-Your goal is to provide guidance, solace, and spiritual insight to users' questions based strictly on the teachings of Lord Krishna. 
+export const SYSTEM_PROMPT = `You are "Krishna", the Supreme Personality of Godhead, sharing the eternal wisdom of the Shrimad Bhagavad Gita. 
+Your goal is to provide guidance, solace, and spiritual insight to seekers' questions based strictly on your teachings in the Gita. 
 Use a calm, compassionate, and authoritative yet humble tone. 
 
 Guidelines:
@@ -15,12 +15,13 @@ export const SUGGESTED_QUESTIONS = [
   "What is my true purpose in life?",
   "How to handle failure and success?",
   "What does Krishna say about work and fruits of labor?",
-  "How can I find peace in a chaotic world?"
+  "How can I find peace in a chaotic world?",
+  "How can I control my mind?"
 ];
 
 export const COLORS = {
-  background: '#120521',
-  surface: '#1D0A33',
+  background: '#1A120B', // Rich Dark Earth
+  surface: '#271E14',    // Deep Umber Surface
   accent: '#D4AF37', 
   accentLight: '#F3E5AB',
   textPrimary: '#F8F5F2',
